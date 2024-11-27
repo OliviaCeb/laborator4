@@ -1,0 +1,148 @@
+/* Stilizare comună pentru toate blocurile */
+.block {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px; /* Distanța dintre blocuri */
+    display: inline-block;
+    margin-right: 20px;
+    background-color: lightgrey; /* culoare de fundal implicită */
+}
+
+/* Blocul 1 - Fundal albastru */
+.block1 {
+    background-color: #4A90E2;
+}
+
+/* Blocul 2 - Fundal verde și imagine mică care se repetă pe întreaga suprafață */
+.block2 {
+    background-color: #7ED321;
+    background-image: url("Imagini/hearts.png"); /* Înlocuiește cu calea către imaginea ta */
+    background-repeat: repeat; /* Se repetă pe întreaga suprafață */
+}
+
+/* Blocul 3 - Fundal roșu și imagine care se repetă doar pe orizontală */
+.block3 {
+    background-color: #D0021B;
+    background-image: url('Imagini/hearts.png'); /* Înlocuiește cu calea către imaginea ta */
+    background-repeat: repeat-x; /* Se repetă doar pe orizontală */
+}
+
+/* Blocul 4 - Fundal galben și imagine care se repetă doar pe verticală */
+.block4 {
+    background-color: #F8E71C;
+    background-image: url('Imagini/hearts.png'); /* Înlocuiește cu calea către imaginea ta */
+    background-repeat: repeat-y; /* Se repetă doar pe verticală */
+}
+
+/* Blocul 5 - Fundal portocaliu și imagine cu poziție fixă */
+.block5 {
+    background-color: #FF8C00; /* Fundal portocaliu (poți modifica) */
+    background-image: url('Imagini/hearts.png'); /* Calea către imaginea ta */
+    background-position: center center; /* Centrează imaginea pe orizontală și verticală */
+    background-repeat: no-repeat; /* Nu repeta imaginea */
+    background-size: auto; /* Asigură că imaginea rămâne proporțională și se încadrează în bloc */
+    width: 200px;
+    height: 200px;}
+
+   /* Stiluri generale */
+ 
+ul, ol {
+    margin: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Listă neordonată */
+ul > li:first-child {
+    font-weight: bold;
+    background-color: #e3f2fd;
+}
+
+ul > li:last-child {
+    font-style: italic;
+    background-color: #ffecb3;
+}
+
+ul > li:nth-child(2) {
+    color: #4caf50;
+}
+
+ul > li:nth-child(3)::before {
+    content: "⭐ ";
+    color: #ff9800;
+}
+
+/* Listă ordonată */
+ol > li:first-child::before {
+    content: "🔥 ";
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+ol > li:last-child {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+    font-style: italic;
+}
+
+ol > li:nth-child(2) {
+    background-color: #e1bee7;
+    color: #6a1b9a;
+}
+
+ol > li:nth-child(3)::first-line {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Efecte hover și active */
+li:hover {
+    background-color: #bbdefb;
+    transform: scale(1.025);
+}
+
+li:active {
+    background-color: #90caf9;
+    transform: scale(0.95);
+}
+/* Stil general pentru link */
+.link-extern {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #3f51b5;
+    padding: 5px;
+    border: 2px solid #3f51b5;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Stări pentru pseudo-clase */
+.link-extern:link {
+    color: #3f51b5;
+}
+
+.link-extern:visited {
+    color: #9c27b0;
+}
+
+.link-extern:hover {
+    background-color: #e3f2fd;
+    color: #1a237e;
+    transform: scale(0.95);
+}
+
+.link-extern:active {
+    background-color: #c5cae9;
+    color: #ff5722;
+    border-color: #ff5722;
+}
